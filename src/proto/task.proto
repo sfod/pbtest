@@ -1,0 +1,5 @@
+message Task {
+    required int64 id = 1;
+    optional string s = 2;
+    optional string p = 3;
+}
