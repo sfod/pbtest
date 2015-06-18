@@ -1,11 +1,15 @@
 language: c
 compiler:
-    - gcc
+  - gcc
+
+before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get install -y libprotobuf-c0 libprotobuf-c0-dev protobuf-c-compiler
 
 before_script:
-    - mkdir build
-    - cd build
-    - cmake ../
+  - mkdir build
+  - cd build
+  - cmake ../
 
 script:
-    - make
+  - make
